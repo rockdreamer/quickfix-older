@@ -1,0 +1,42 @@
+include_directories(
+	..
+	../../../UnitTest++/src
+)
+set(TLIB_NAME quickfixcpptest)
+set(TLIB_SRCS 
+	DictionaryTestCase.cpp
+	FieldBaseTestCase.cpp 
+	FieldConvertorsTestCase.cpp 
+	FileLogTestCase.cpp 
+	FileStoreFactoryTestCase.cpp 
+	FileStoreTestCase.cpp 
+	FileUtilitiesTestCase.cpp 
+	HttpMessageTestCase.cpp 
+	HttpParserTestCase.cpp 
+	#MemoryStoreTestCase.cpp 
+	#MemoryStoreTestCase.h 
+	MessageSortersTestCase.cpp 
+	MessagesTestCase.cpp
+	#MySQLStoreTestCase.cpp 
+	#MySQLStoreTestCase.h 
+	NullStoreTestCase.cpp 
+	NullStoreTestCase.h 
+	#OdbcStoreTestCase.cpp 
+	#OdbcStoreTestCase.h 
+	ParserTestCase.cpp 
+	PostgreSQLStoreTestCase.cpp 
+	SessionIDTestCase.cpp 
+	SessionSettingsTestCase.cpp 
+	SessionTestCase.cpp 
+	SettingsTestCase.cpp 
+	SocketAcceptorTestCase.cpp 
+	SocketConnectorTestCase.cpp 
+	SocketServerTestCase.cpp 
+	StringUtilitiesTestCase.cpp 
+	TestHelper.cpp 
+	TimeRangeTestCase.cpp 
+	UtcTimeOnlyTestCase.cpp
+	UtcTimeStampTestCase.cpp
+)
+include(QFLibrary)
+
