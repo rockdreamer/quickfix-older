@@ -26,9 +26,11 @@
 #pragma warning( disable : 4503 4355 4786 4290 )
 #endif
 
+/*
 #ifndef _MSC_VER
 #include "Allocator.h"
 #endif
+*/
 
 #ifdef HAVE_STLPORT
   #define ALLOCATOR std::allocator
@@ -91,6 +93,7 @@ typedef int socklen_t;
 #include <cctype>
 #include <ctime>
 #include <cstdio>
+#include <cstdlib>
 
 namespace FIX
 {

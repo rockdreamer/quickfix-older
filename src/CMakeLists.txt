@@ -1,6 +1,12 @@
 include_directories(
+	${CMAKE_CURRENT_BINARY_DIR}
 	C++
-	C++/test)
+	C++/test
+	../UnitTest++/src
+)
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/config-base.h ${CMAKE_CURRENT_BINARY_DIR}/config.h)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/config.h DESTINATION include/quickfix)
+
 add_subdirectory(C++)
 if(HAVE_JAVA)
 add_subdirectory(java)
@@ -21,7 +27,7 @@ include(QFExecutable)
 
 set(NAME_STD ut)
 set(MAINSRCS ut.cpp)
-set(EXECLIBS quickfix)
+set(EXECLIBS quickfix quickfixcpptest UnitTest++)
 include(QFExecutable)
 
 set(NAME_STD pt)

@@ -38,7 +38,7 @@ namespace FIX
   {
     Locker locker(s_mutex);
 
-    #if TERMINATE_IN_STD
+    #ifdef TERMINATE_IN_STD
       std::set_terminate(FIX::CallStack::terminate);
     #else
       set_terminate(FIX::CallStack::terminate);
@@ -120,7 +120,7 @@ namespace FIX
 
   void CallStack::Context::caught( std::exception& e )
   {
-#if TYPEINFO_IN_STD
+#ifdef TYPEINFO_IN_STD
     const std::type_info&
 #else
     const type_info&
