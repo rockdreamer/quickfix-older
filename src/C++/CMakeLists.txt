@@ -100,16 +100,6 @@ set(TLIB_SRCS
 	DOMDocument.h 
 	LIBXML_DOMDocument.cpp 
 	LIBXML_DOMDocument.h 
-#	FIX40_Messages.h 
-#	FIX41_Messages.h 
-#	FIX42_Messages.h 
-#	FIX43_Messages.h 
-#	FIX44_Messages.h 
-#	FIX40_MessageCracker.h 
-#	FIX41_MessageCracker.h 
-#	FIX42_MessageCracker.h 
-#	FIX43_MessageCracker.h 
-#	FIX44_MessageCracker.h 
 	MessageCracker.h 
 	Responder.h 
 	CallStack.h 
@@ -123,4 +113,16 @@ set(TLIB_SRCS ${TLIB_SRCS}
 )
 endif()
 include(QFLibrary)
+install(DIRECTORY . DESTINATION include/quickfix
+          FILES_MATCHING PATTERN "*.h")
+install(DIRECTORY fix40 DESTINATION include/quickfix
+          FILES_MATCHING PATTERN "*.h")
+install(DIRECTORY fix41 DESTINATION include/quickfix
+          FILES_MATCHING PATTERN "*.h")
+install(DIRECTORY fix42 DESTINATION include/quickfix
+          FILES_MATCHING PATTERN "*.h")
+install(DIRECTORY fix43 DESTINATION include/quickfix
+          FILES_MATCHING PATTERN "*.h")
+install(DIRECTORY fix44 DESTINATION include/quickfix
+          FILES_MATCHING PATTERN "*.h")
 add_subdirectory(test)

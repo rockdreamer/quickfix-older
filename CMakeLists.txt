@@ -2,17 +2,21 @@ cmake_minimum_required(VERSION 2.6)
 project(quickfix C CXX)
 
 set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/)
+set(TLIB_VERSION 12.0.0)
 
 include(QFoptions)
 include(QFlibs NO_POLICY_SCOPE)
 include(QFconfig)
 
-add_subdirectory(UnitTest++)
+
+#add_subdirectory(UnitTest++)
 add_subdirectory(src)
 #add_subdirectory(bin)
 #add_subdirectory(spec)
 #add_subdirectory(test)
-add_subdirectory(examples)	
+if(QF_WITH_EXAMPLES)
+	add_subdirectory(examples)	
+endif()
 #add_subdirectory(doc)
 	
 
@@ -201,4 +205,3 @@ add_subdirectory(examples)
 #select statement decrements timeval parameter if interupted),
 #AC_MSG_RESULT(no),
 #AC_MSG_RESULT(unable to determine, assuming no...))
-
