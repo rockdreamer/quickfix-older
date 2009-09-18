@@ -15,6 +15,7 @@ endif()
 
 if(UNIX)
 	add_definitions(-D__UNIX__)
+	add_definitions(-DUNITTEST_POSIX)
 
 if("${CMAKE_SYSTEM_NAME}" STREQUAL "AIX")
 	add_definitions(-D__AIX__)

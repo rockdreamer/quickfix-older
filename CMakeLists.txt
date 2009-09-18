@@ -9,7 +9,7 @@ include(QFlibs NO_POLICY_SCOPE)
 include(QFconfig)
 
 
-#add_subdirectory(UnitTest++)
+add_subdirectory(UnitTest++)
 add_subdirectory(src)
 #add_subdirectory(bin)
 #add_subdirectory(spec)
