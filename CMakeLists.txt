@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.6)
-project(quickfix CXX)
+project(quickfix C CXX)
 
 set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/)
 
@@ -7,12 +7,13 @@ include(QFoptions)
 include(QFlibs NO_POLICY_SCOPE)
 include(QFconfig)
 
+add_subdirectory(UnitTest++)
 add_subdirectory(src)
-add_subdirectory(bin)
-add_subdirectory(spec)
-add_subdirectory(test)
+#add_subdirectory(bin)
+#add_subdirectory(spec)
+#add_subdirectory(test)
 add_subdirectory(examples)	
-add_subdirectory(doc)
+#add_subdirectory(doc)
 	
 
 

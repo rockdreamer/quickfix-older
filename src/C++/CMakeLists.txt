@@ -115,5 +115,12 @@ set(TLIB_SRCS
 	CallStack.h 
 	CallStack.cpp
 )
+if (WIN32)
+set(TLIB_SRCS ${TLIB_SRCS} 
+	stdafx.h
+	MSXML_DOMDocument.h
+	MSXML_DOMDocument.cpp
+)
+endif()
 include(QFLibrary)
 add_subdirectory(test)

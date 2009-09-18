@@ -38,5 +38,6 @@ set(TLIB_SRCS
 	UtcTimeOnlyTestCase.cpp
 	UtcTimeStampTestCase.cpp
 )
+set(TLIB_DEPLIBS ${TLIB_DEPLIBS} quickfix)
 include(QFLibrary)
 
