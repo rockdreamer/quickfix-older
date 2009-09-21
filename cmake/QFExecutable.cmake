@@ -6,6 +6,10 @@ if (WIN32 AND EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/${NAME_STD}.wc)
 	set (EXECLIBS ${EXECLIBS} wsock32)
 endif()
 
+if (WIN32)
+	set (MAINSRCS ${MAINSRCS} ${PROJECT_SOURCE_DIR}/src/getopt.c ${PROJECT_SOURCE_DIR}/src/getopt-repl.h)
+endif()
+
 add_executable(${NAME_STD} ${MAINSRCS})
 set_target_properties(${NAME_STD} PROPERTIES
 	INSTALL_RPATH_USE_LINK_PATH TRUE
